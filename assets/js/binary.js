@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.3.13/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.2","target":"arcade","targetVersion":"1.3.13","repo":"jwunderl/arcade-tick-event"}
-// total=1174541 new=6.68% cached=87.77% other=5.55%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.3.13/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.3","target":"arcade","targetVersion":"1.3.13","repo":"jwunderl/arcade-tick-event"}
+// total=1174564 new=6.68% cached=87.77% other=5.55%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -387,7 +387,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P245281(s) {
+function _main___P246196(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -763,7 +763,7 @@ switch (step) {
     r0 = s.retval;
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
-    s.tmp_2 = tickevent_createKV__P245060_mk(s);
+    s.tmp_2 = tickevent_createKV__P245975_mk(s);
     s.tmp_2.arg0 = "data";
     s.tmp_2.arg1 = 5;
     s.callLocIdx = 62; s.pc = 34; return s.tmp_2;
@@ -771,7 +771,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_1);
-    s.tmp_3 = tickevent_post__P245059_mk(s);
+    s.tmp_3 = tickevent_post__P245974_mk(s);
     s.tmp_3.arg0 = s.tmp_0;
     s.callLocIdx = 63; s.pc = 35; return s.tmp_3;
   case 35:
@@ -780,13 +780,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P245281.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P245281.continuations = [  ]
+_main___P246196.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P246196.continuations = [  ]
 
-function _main___P245281_mk(s) {
+function _main___P246196_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P245281, depth: s.depth + 1,
+        parent: s, fn: _main___P246196, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1373,7 +1373,7 @@ function inline__P232892_mk(s) {
 
 
 
-function tickevent_createKV__P245060(s) {
+function tickevent_createKV__P245975(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1388,9 +1388,9 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtcore_mkClassInstance(tickevent_KeyValue__C245061_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(tickevent_KeyValue__C245976_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = tickevent_KeyValue_constructor__P245062_mk(s);
+    s.tmp_1 = tickevent_KeyValue_constructor__P245977_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg0;
     s.tmp_1.arg2 = s.arg1;
@@ -1401,12 +1401,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-tickevent_createKV__P245060.info = {"start":350,"length":120,"line":17,"column":4,"endLine":19,"endColumn":5,"fileName":"main.ts","functionName":"createKV","argumentNames":["key","value"]}
+tickevent_createKV__P245975.info = {"start":350,"length":120,"line":17,"column":4,"endLine":19,"endColumn":5,"fileName":"main.ts","functionName":"createKV","argumentNames":["key","value"]}
 
-function tickevent_createKV__P245060_mk(s) {
+function tickevent_createKV__P245975_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: tickevent_createKV__P245060, depth: s.depth + 1,
+        parent: s, fn: tickevent_createKV__P245975, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1418,7 +1418,7 @@ function tickevent_createKV__P245060_mk(s) {
 
 
 
-function tickevent_KeyValue_constructor__P245062(s) {
+function tickevent_KeyValue_constructor__P245977(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1435,19 +1435,19 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, tickevent_KeyValue__C245061_VT)) failedCast(r0);
+    if (!checkSubtype(r0, tickevent_KeyValue__C245976_VT)) failedCast(r0);
     r0 = (s.arg0).fields["key"] = (s.arg1);
     r0 = (s.arg0).fields["value"] = (s.arg2);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-tickevent_KeyValue_constructor__P245062.info = {"start":122,"length":100,"line":7,"column":8,"endLine":10,"endColumn":13,"fileName":"main.ts","functionName":"inline","argumentNames":["this","key","value"]}
+tickevent_KeyValue_constructor__P245977.info = {"start":122,"length":100,"line":7,"column":8,"endLine":10,"endColumn":13,"fileName":"main.ts","functionName":"inline","argumentNames":["this","key","value"]}
 
-function tickevent_KeyValue_constructor__P245062_mk(s) {
+function tickevent_KeyValue_constructor__P245977_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: tickevent_KeyValue_constructor__P245062, depth: s.depth + 1,
+        parent: s, fn: tickevent_KeyValue_constructor__P245977, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -1458,7 +1458,7 @@ function tickevent_KeyValue_constructor__P245062_mk(s) {
 
 
 
-function tickevent_post__P245059(s) {
+function tickevent_post__P245974(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1468,99 +1468,27 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tick___245073 = undefined;
-    s.data___245076 = undefined;
-    s.unnamed3026___U2 = undefined;
-    s.unnamed3027___U3 = undefined;
-    s.toSend___245084 = undefined;
-    s.buf___245088 = undefined;
-    s.i___245093 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtrt.mkMap();
-    s.tick___245073 = (r0);
-    s.data___245076 = (undefined);
-    s.unnamed3026___U2 = (s.arg0);
-    s.unnamed3027___U3 = (0);
+    s.tmp_0 = tickevent_sendTick__P245989_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.callLocIdx = 65; s.pc = 1; return s.tmp_0;
   case 1:
-    s.tmp_0 = r0 = s.unnamed3027___U3;
-    r0 = pxsim_Array__length(s.unnamed3026___U2);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_0 < s.tmp_1);
-    if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed3026___U2, s.unnamed3027___U3);
-    s.data___245076 = (r0);
-    r0 = s.data___245076.fields["key"];
-    s.tmp_2 = r0;
-    r0 = s.data___245076.fields["value"];
-    s.tmp_3 = r0;
-    r0 = pxsim_pxtrt.mapSetGeneric(s.tick___245073, s.tmp_2, s.tmp_3);
-    r0 = (s.unnamed3027___U3 + 1);
-    s.unnamed3027___U3 = (r0);
-    { step = 1; continue; }
-  case 2:
-    s.unnamed3026___U2 = (undefined);
-    s.tmp_0 = JSON_stringify__P228948_mk(s);
-    s.tmp_0.arg0 = s.tick___245073;
-    s.tmp_0.arg1 = null;
-    s.tmp_0.arg2 = 0;
-    s.callLocIdx = 65; s.pc = 5; return s.tmp_0;
-  case 5:
-    r0 = s.retval;
-    s.toSend___245084 = (r0);
-    r0 = pxsim_String_.length(s.toSend___245084);
-    s.tmp_0 = r0;
-    r0 = pxsim.control.createBuffer(s.tmp_0);
-    s.buf___245088 = (r0);
-    s.i___245093 = (0);
-  case 3:
-    s.tmp_1 = r0 = s.i___245093;
-    r0 = pxsim_String_.length(s.toSend___245084);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 < s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 4; continue; }
-    s.tmp_3 = r0 = s.buf___245088;
-    s.tmp_4 = r0 = s.i___245093;
-    r0 = pxsim_String_.charCodeAt(s.toSend___245084, s.i___245093);
-    s.tmp_5 = r0;
-    r0 = pxsim.BufferMethods.setByte(s.tmp_3, s.tmp_4, s.tmp_5);
-    r0 = (s.i___245093 + 1);
-    s.i___245093 = (r0);
-    { step = 3; continue; }
-  case 4:
-    s.tmp_0 = tickevent_sendTick__P245110_mk(s);
-    s.tmp_0.arg0 = s.buf___245088;
-    s.callLocIdx = 66; s.pc = 6; return s.tmp_0;
-  case 6:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-tickevent_post__P245059.info = {"start":649,"length":427,"line":26,"column":4,"endLine":40,"endColumn":5,"fileName":"main.ts","functionName":"post","argumentNames":["tickData"]}
+tickevent_post__P245974.info = {"start":649,"length":78,"line":26,"column":4,"endLine":28,"endColumn":5,"fileName":"main.ts","functionName":"post","argumentNames":["tickData"]}
 
-function tickevent_post__P245059_mk(s) {
+function tickevent_post__P245974_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: tickevent_post__P245059, depth: s.depth + 1,
+        parent: s, fn: tickevent_post__P245974, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  tick___245073: undefined,
-  data___245076: undefined,
-  unnamed3026___U2: undefined,
-  unnamed3027___U3: undefined,
-  toSend___245084: undefined,
-  buf___245088: undefined,
-  i___245093: undefined,
   arg0: undefined,
 } }
 
@@ -1568,7 +1496,7 @@ function tickevent_post__P245059_mk(s) {
 
 
 
-function tickevent_sendTick__P245110(s) {
+function tickevent_sendTick__P245989(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1578,22 +1506,95 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
+    s.tick___245992 = undefined;
+    s.data___245995 = undefined;
+    s.unnamed3158___U2 = undefined;
+    s.unnamed3159___U3 = undefined;
+    s.toSend___246003 = undefined;
+    s.buf___246007 = undefined;
+    s.i___246012 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtcore.sendMessage("tick-event", s.arg0);
+    r0 = pxsim_pxtrt.mkMap();
+    s.tick___245992 = (r0);
+    s.data___245995 = (undefined);
+    s.unnamed3158___U2 = (s.arg0);
+    s.unnamed3159___U3 = (0);
+  case 1:
+    s.tmp_0 = r0 = s.unnamed3159___U3;
+    r0 = pxsim_Array__length(s.unnamed3158___U2);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_0 < s.tmp_1);
+    if (!r0) { step = 2; continue; }
+    r0 = pxsim_Array__getAt(s.unnamed3158___U2, s.unnamed3159___U3);
+    s.data___245995 = (r0);
+    r0 = s.data___245995.fields["key"];
+    s.tmp_2 = r0;
+    r0 = s.data___245995.fields["value"];
+    s.tmp_3 = r0;
+    r0 = pxsim_pxtrt.mapSetGeneric(s.tick___245992, s.tmp_2, s.tmp_3);
+    r0 = (s.unnamed3159___U3 + 1);
+    s.unnamed3159___U3 = (r0);
+    { step = 1; continue; }
+  case 2:
+    s.unnamed3158___U2 = (undefined);
+    s.tmp_0 = JSON_stringify__P228948_mk(s);
+    s.tmp_0.arg0 = s.tick___245992;
+    s.tmp_0.arg1 = null;
+    s.tmp_0.arg2 = 0;
+    s.callLocIdx = 66; s.pc = 5; return s.tmp_0;
+  case 5:
+    r0 = s.retval;
+    s.toSend___246003 = (r0);
+    r0 = pxsim_String_.length(s.toSend___246003);
+    s.tmp_0 = r0;
+    r0 = pxsim.control.createBuffer(s.tmp_0);
+    s.buf___246007 = (r0);
+    s.i___246012 = (0);
+  case 3:
+    s.tmp_1 = r0 = s.i___246012;
+    r0 = pxsim_String_.length(s.toSend___246003);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 < s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 4; continue; }
+    s.tmp_3 = r0 = s.buf___246007;
+    s.tmp_4 = r0 = s.i___246012;
+    r0 = pxsim_String_.charCodeAt(s.toSend___246003, s.i___246012);
+    s.tmp_5 = r0;
+    r0 = pxsim.BufferMethods.setByte(s.tmp_3, s.tmp_4, s.tmp_5);
+    r0 = (s.i___246012 + 1);
+    s.i___246012 = (r0);
+    { step = 3; continue; }
+  case 4:
+    r0 = pxsim_pxtcore.sendMessage("tick-event", s.buf___246007);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-tickevent_sendTick__P245110.info = {"start":1185,"length":248,"line":44,"column":4,"endLine":48,"endColumn":5,"fileName":"main.ts","functionName":"sendTick","argumentNames":["msg"]}
+tickevent_sendTick__P245989.info = {"start":836,"length":611,"line":32,"column":4,"endLine":48,"endColumn":5,"fileName":"main.ts","functionName":"sendTick","argumentNames":["tickData"]}
 
-function tickevent_sendTick__P245110_mk(s) {
+function tickevent_sendTick__P245989_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: tickevent_sendTick__P245110, depth: s.depth + 1,
+        parent: s, fn: tickevent_sendTick__P245989, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  tick___245992: undefined,
+  data___245995: undefined,
+  unnamed3158___U2: undefined,
+  unnamed3159___U3: undefined,
+  toSend___246003: undefined,
+  buf___246007: undefined,
+  i___246012: undefined,
   arg0: undefined,
 } }
 
@@ -38770,7 +38771,7 @@ const texteffects_TextEffect__C231401_VT = mkVTable({
     "set/getState": null,
   },
 });
-const tickevent_KeyValue__C245061_VT = mkVTable({
+const tickevent_KeyValue__C245976_VT = mkVTable({
   name: "KeyValue",
   numFields: 2,
   classNo: 20,
@@ -39911,5 +39912,5 @@ const sprites_StaticObstacle__C230722_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, [])
 
-return _main___P245281
+return _main___P246196
 })
