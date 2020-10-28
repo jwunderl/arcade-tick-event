@@ -36,7 +36,7 @@ namespace tickevent {
         for (let i = 0; i < toSend.length; ++i) {
             buf[i] = toSend.charCodeAt(i);
         }
-        console.log(buf.toString())
+
         sendTick(buf);
     }
 
