@@ -10,6 +10,7 @@ namespace tickevent {
     }
 
     //% block="key $key value $value"
+    //% value.shadow=text
     //% blockId=tickeventcreatekv
     export function createKV(key: string, value: string | number): KeyValue {
         return new KeyValue(key, value);
@@ -17,6 +18,7 @@ namespace tickevent {
 
     //% block="post tick event $tickData"
     //% blockId=tickeventpost
+    //% tickData.shadow=lists_create_with
     //% tickData.defl=tickeventcreatekv
     export function post(tickData: KeyValue[]) {
         const tick: { [index: string]: string | number } = {};
