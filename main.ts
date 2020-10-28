@@ -25,6 +25,12 @@ namespace tickevent {
     //% tickData.defl=tickeventcreatekv
     //% weight=100
     export function post(tickData: KeyValue[]) {
+        sendTick(tickData);
+    }
+
+    // List this as an identity function, so the call will get elided in hw compile
+    //% shim=TD_ID
+    function sendTick(tickData: KeyValue[]) {
         const tick: { [index: string]: string | number } = {};
 
         for (const data of tickData) {
@@ -37,14 +43,8 @@ namespace tickevent {
             buf[i] = toSend.charCodeAt(i);
         }
 
-        sendTick(buf);
-    }
-
-    // List this as an identity function, so the call will get elided in hw compile
-    //% shim=TD_ID
-    function sendTick(msg: Buffer) {
-        control.simmessages.send("tick-event", msg);
+        control.simmessages.send("tick-event", buf);
         // TODO: https://github.com/microsoft/pxt-common-packages/pull/1194
-        // control.simmessages.send("tick-event", msg, /** noBroadcast */ true);
+        // control.simmessages.send("tick-event", buf, /** noBroadcast */ true);
     }
 }
