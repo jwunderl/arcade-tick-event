@@ -43,8 +43,6 @@ namespace tickevent {
             buf[i] = toSend.charCodeAt(i);
         }
 
-        control.simmessages.send("tick-event", buf);
-        // TODO: https://github.com/microsoft/pxt-common-packages/pull/1194
-        // control.simmessages.send("tick-event", buf, /** noBroadcast */ true);
+        control.simmessages.send("tick-event", buf, /** noBroadcast */ true);
     }
 }
